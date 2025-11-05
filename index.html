@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusFlow - Time Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Theme toggle -->
+  <button id="themeToggle">🌙</button>
+
+  <div class="container">
+    <header>
+      <h1>🌿 SkenFlow</h1>
+      <p>Your time is considered as gold</p>
+    </header>
+
+    <section class="task-input">
+      <input id="taskInput" type="text" placeholder="Enter your task..." />
+      <button id="addBtn">Add Task</button>
+    </section>
+
+    <section class="task-list-wrapper">
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+
+    <section class="task-controls">
+      <button id="startAllBtn" style="display:none;">Start All Tasks</button>
+    </section>
+  </div>
+
+  <!-- Timer Overlay -->
+  <div id="timerOverlay" style="display:none;">
+    <button id="closeTimerBtn">✖</button>
+    <div class="timer-circle-wrapper">
+      <svg class="timer-circle-svg" width="260" height="260">
+        <circle cx="130" cy="130" r="120" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
+        <circle id="timerProgress" cx="130" cy="130" r="120" stroke="#5ac8fa" stroke-width="8" fill="none"
+          stroke-dasharray="754" stroke-dashoffset="754" transform="rotate(-90 130 130)" />
+      </svg>
+      <div class="timer-circle-content">
+        <span id="timerDisplay">60:00</span>
+      </div>
+    </div>
+    <button id="skipBtn">Skip</button>
+    <h3 id="currentTaskTitle">Current Task</h3>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
