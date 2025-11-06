@@ -378,9 +378,23 @@ body.dark .task-list-wrapper {
   .timer-circle-wrapper {
     width: 200px;
     height: 200px;
+    aspect-ratio: 1/1;
   }
 
   .timer-circle-content {
     font-size: 2.5rem;
   }
+}
+
+.timer-circle-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-circle-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  aspect-ratio: 1 / 1; /* Giữ tỷ lệ hình vuông */
 }
